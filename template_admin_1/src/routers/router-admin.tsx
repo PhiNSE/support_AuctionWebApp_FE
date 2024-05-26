@@ -10,8 +10,7 @@ const RouterComAdmin = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/admin" element={<Index />} />
+        <Route path="/admin" element={<ManageManager />} />
         <Route path="/admin/account/manager" element={<ManageManager />} />
         <Route path="/admin/account/staff" element={<ManageStaff />} />
         <Route path="/admin/account/user" element={<ManageUser />} />

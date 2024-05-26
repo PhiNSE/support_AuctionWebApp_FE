@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
+import TableComponent from "./TableComponent";
 
 const ManageUser = () => {
   return (
     <>
       <section className="main_content dashboard_part">
-        
         <div className="main_content_iner ">
           <div className="container-fluid plr_30 body_white_bg pt_30">
             <div className="row justify-content-center">
@@ -15,22 +15,33 @@ const ManageUser = () => {
                     <div className="box_right d-flex lms_block">
                       <div className="serach_field_2">
                         <div className="search_inner">
-                          <form >
+                          <form>
                             <div className="search_field">
                               <input type="text" placeholder="Tìm kiếm..." />
                             </div>
-                            <button type="submit"> <i className="ti-search"></i> </button>
+                            <button type="submit">
+                              {" "}
+                              <i className="ti-search"></i>{" "}
+                            </button>
                           </form>
                         </div>
                       </div>
                       <div className="add_button ms-2">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#addcategory" className="btn_1">Thêm tài khoản mới</a>
+                        <a
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#addcategory"
+                          className="btn_1"
+                        >
+                          Thêm tài khoản mới
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div className="QA_table ">
+                    <TableComponent />
 
-                    <table className="table lms_table_active">
+                    {/* <table className="table lms_table_active">
                       <thead>
                         <tr>
                           <th scope="col">ID</th>
@@ -53,7 +64,7 @@ const ManageUser = () => {
                           <td><a href="#" className="btn btn-sm btn-warning">Xem</a><a href="#" className="btn btn-sm btn-danger">Xóa</a></td>
                         </tr>
                       </tbody>
-                    </table>
+                    </table> */}
                   </div>
                 </div>
               </div>
@@ -61,9 +72,8 @@ const ManageUser = () => {
           </div>
         </div>
       </section>
-
     </>
-  )
-}
+  );
+};
 
-export default ManageUser
+export default ManageUser;

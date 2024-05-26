@@ -1,5 +1,3 @@
-import EnhancedTable from "./TableComponent";
-
 const AuctionsList = () => {
   return (
     <>
@@ -38,7 +36,47 @@ const AuctionsList = () => {
                     </div>
                   </div>
                   <div className="QA_table ">
-                    <EnhancedTable />
+                    <table className="table lms_table_active">
+                      <thead>
+                        <tr>
+                          <th scope="col">STT</th>
+                          <th scope="col">Mã phiên</th>
+                          <th scope="col">Tên phiên</th>
+                          <th scope="col">....</th>
+                          <th scope="col">....</th>
+                          <th scope="col">Trạng thái</th>
+                          <th scope="col">Thao tác</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            {" "}
+                            <a href="#" className="question_content">
+                              {" "}
+                              1
+                            </a>
+                          </th>
+                          <td>PDG0001</td>
+                          <td>Đấu giá Đồng hồ</td>
+                          <td>.....</td>
+                          <td>.....</td>
+                          <td>
+                            <a href="#" className="status_btn">
+                              WAITING
+                            </a>
+                          </td>
+                          <td>
+                            <a
+                              href="/manager/View/ViewAuctionsList"
+                              className="btn btn-sm btn-warning"
+                            >
+                              Xem
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

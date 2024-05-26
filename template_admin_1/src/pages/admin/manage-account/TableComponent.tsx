@@ -178,7 +178,7 @@ const headCells: readonly HeadCell[] = [
     id: "name",
     numeric: false,
     disablePadding: true,
-    label: "Name",
+    label: "Tên",
   },
   {
     id: "email",
@@ -190,19 +190,19 @@ const headCells: readonly HeadCell[] = [
     id: "address",
     numeric: false,
     disablePadding: false,
-    label: "Address",
+    label: "Địa chỉ",
   },
   {
     id: "phone",
     numeric: false,
     disablePadding: false,
-    label: "Phone",
+    label: "Số điện thoại",
   },
   {
     id: "role",
     numeric: false,
     disablePadding: false,
-    label: "Role",
+    label: "Vai trò",
   },
 ];
 
@@ -309,7 +309,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
           id="tableTitle"
           component="div"
         >
-          Nutrition
+          Tài Khoản
         </Typography>
       )}
       {numSelected > 0 ? (
@@ -328,7 +328,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
-export default function EnhancedTable() {
+export default function TableComponent() {
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof Data>("name");
   const [selected, setSelected] = React.useState<readonly number[]>([]);
@@ -485,7 +485,7 @@ export default function EnhancedTable() {
       </Paper>
       <FormControlLabel
         control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="Dense padding"
+        label="Nhỏ gọn"
       />
     </Box>
   );
